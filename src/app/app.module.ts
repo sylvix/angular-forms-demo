@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ValidatePasswordDirective } from './validate-password.directive';
 import { ValidateIdenticalDirective } from './validate-identical.directive';
 import { ProfileComponent } from './profile/profile.component';
@@ -25,6 +25,7 @@ const ROUTES = [
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
   ],
   providers: [],
