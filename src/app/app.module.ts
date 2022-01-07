@@ -3,14 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
+import { ValidatePasswordDirective } from './validate-password.directive';
+import { ValidateIdenticalDirective } from './validate-identical.directive';
+import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
+
+const ROUTES = [
+  {path: '', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent},
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ValidatePasswordDirective,
+    ValidateIdenticalDirective,
+    ProfileComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [],
   bootstrap: [AppComponent]
